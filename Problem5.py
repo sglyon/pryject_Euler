@@ -12,3 +12,5 @@ while x:
         print test
         x = False
     i += 1
+
+answer = test  # From Josh
