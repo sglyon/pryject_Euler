@@ -6,7 +6,7 @@ Author: Spencer Lyon
 from time import time
 start_time = time()
 
-big_number = [ 37107287533902102798797998220837590246510135740250,
+big_number = [37107287533902102798797998220837590246510135740250,
                    46376937677490009712648124896970078050417018260538,
                    74324986199524741059474233309513058123726617309629,
                    91942213363574161572522430563301811072406154908250,
@@ -110,5 +110,5 @@ big_number = [ 37107287533902102798797998220837590246510135740250,
 ans = int(str(sum(big_number))[:10])
 end_time = time()
 elapsed_time = end_time - start_time
-print "total time elapsed is ", elapsed_time, " seconds"
+print "total time elapsed is ", elapsedapsed_time, " seconds"
 print ans
