@@ -30,3 +30,15 @@ end_time = time()
 elapsed_time = end_time - start_time
 print "total time elapsed is ", elapsed_time, " seconds"
 print [ans, max_len]
+
+
+def get_chain(n):
+    chain = []
+    while n > 1:
+        chain.append(n)
+        if n % 2 == 0:
+            n = n / 2
+        else:
+            n = 3 * n + 1
+
+    return chain

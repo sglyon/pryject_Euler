@@ -29,32 +29,32 @@ def pascal(n):
 
 
 def coefs(h, j):
-	"""
-	Parameters
-	----------
-	h: number, int
-		The number of parameters in the polynomial expansion.
-	j: number, int
-		The degree of the expansion.
+    """
+    Parameters
+    ----------
+    h: number, int
+        The number of parameters in the polynomial expansion.
+    j: number, int
+        The degree of the expansion.
 
-	Returns
-	-------
-	element: number, int
-		The number of coefficients in a jth order polynomial expansion in terms
-		of h parameters.
-	"""
-	# gather all rows into a list
-	pas = np.asarray(list(pascal(h + j)))
+    Returns
+    -------
+    element: number, int
+        The number of coefficients in a jth order polynomial expansion in terms
+        of h parameters.
+    """
+    # gather all rows into a list
+    pas = np.asarray(list(pascal(h + j)))
 
-	#Pull out the last row
-	theRow = pas[-1]
+    #Pull out the last row
+    theRow = pas[-1]
 
-	# grab the correct element.
-	element = theRow[j]
+    # grab the correct element.
+    element = theRow[j]
 
 
 
-	return element
+    return element
 
 ans = coefs(20, 20)
 
