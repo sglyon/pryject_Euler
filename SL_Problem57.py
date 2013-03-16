@@ -29,15 +29,16 @@ from time import time
 
 start_time = time()
 
+f1 = (3, 2)
 
-def gen_expr(n):
-    """generate string expression for nth iteration"""
-    ans = '1 + 1/'
-    if n == 1:
-        ans += 2
-    return ans
+ans = 0
 
-# TODO: Haven't done this.
+for i in range(1, 1000):
+    # Just study the first 5 or 6 and you'll see this is true
+    f2 = (f1[0] + f1[1] * 2, f1[0] + f1[1])
+    if len(str(f2[0])) > len(str(f2[1])):
+        ans += 1
+    f1 = f2
 
 print("The answer is: %i" % (ans))
 

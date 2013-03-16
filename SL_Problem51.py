@@ -21,18 +21,32 @@ prime value family.
 """
 from __future__ import division
 from time import time
-from sympy import isprime
+from sympy import primerange
 
 start_time = time()
-digits = int(raw_input('Enter the number of digits: '))
 
-primes = set()
-checked = set()
+# Guess 5 or 6 digit number
+nums = list(primerange(10000, 999999))
+num_set = set(nums)
 
-if digits == 2:
-    for num in xrange(11, 100, 2):
-        temp = 0
-        st_num = str(num)
-        if isprime(num):
-            primes.add(num)
-            checked
+str_nums1 = [str(i) for i in range(10)]
+str_nums = [str(i) for i in range(1, 10)]
+
+for i in nums:
+    count = 1
+    si = str(i)
+    for repl1 in str_nums1:
+        for repl2 in str_nums:
+            if si.count(repl1) == 3:  # Found this hint online.
+                new_int = int(si.replace(repl1, repl2))
+                if new_int != i and new_int in num_set:
+                    count += 1
+    if count == 8:
+        break
+
+ans = i
+
+print 'The answer is: ', ans
+running_time = time()
+elapsed_time = running_time - start_time
+print 'Total Execution time is ', elapsed_time, 'seconds'
