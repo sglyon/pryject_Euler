@@ -31,20 +31,20 @@ def classify(n):
         return 2
 
 nums = np.arange(1, 28123 + 1)
+n_set = set(nums)
 
 classy = np.array([classify(i) for i in nums])
 
 abuns = nums[classy == 2]
 
-abun = set(abuns)
+a = np.tile(abuns, (abuns.size, 1))
 
-ans = 0
+all_sums = a + a.T
+flat = np.ravel(all_sums)
+candidates = set(np.unique(flat[flat <= 28123]))
+ans = sum(n_set.difference(candidates))
 
-for i in xrange(28123):
-    if not any((i - a in abun) for a in abun):
-        ans += i
-
-print 'The answer is: ', ans
+print('The answer is: %i' % ans)
 
 end = time() - start
-print 'Total execution time is: ', end
+print('Total execution time is: %.5f' % end)
