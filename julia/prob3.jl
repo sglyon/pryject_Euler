@@ -10,3 +10,4 @@ Date: Wed Dec 18 14:38:25 MST 2013
 
 """
 euler3() = maximum(keys(factor(600851475143)))
+println(euler3())

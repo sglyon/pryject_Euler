@@ -14,3 +14,5 @@ while x:
     i += 1
 
 answer = test  # From Josh
+
+print(answer)

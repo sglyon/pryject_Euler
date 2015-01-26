@@ -24,3 +24,5 @@ function euler4()
     end
     return ans
 end
+
+println(euler4())

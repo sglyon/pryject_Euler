@@ -4,8 +4,8 @@ using Benchmark
 module Tools
 
 export
-    my_bench,
-    new_bench,
+    # my_bench,
+    # new_bench,
     primes1,
     primes2,
     fibn,
@@ -18,17 +18,17 @@ export
     gen_prob_skeleton
 
 # TODO: Why do we do this? I do it b/c everyone else does
-using DataFrames
-using Benchmark
+# using DataFrames
+# using Benchmark
 
 ## ------------ ##
 #- benchmarking -#
 ## ------------ ##
 
-function my_bench(args...)
-    return benchmark(args...)[["Benchmark", "Iterations", "AverageWall",
-                               "TotalWall", "MaxWall", "MinWall"]]
-end
+# function my_bench(args...)
+#     return benchmark(args...)[["Benchmark", "Iterations", "AverageWall",
+#                                "TotalWall", "MaxWall", "MinWall"]]
+# end
 
 # function new_bench(n::Int, m::Int=10)
 #     # Create benchmark df for euler problems 1 to n by running m times
@@ -43,17 +43,17 @@ end
 # end
 
 
-function new_bench(n::Int, m::Array{Int, 1})
-    # Create benchmark df for euler problems 1 to n by running m times
-    if length(m) != n
-        error("length(m) must equal n")
-    end
-    df = my_bench(euler1, "Problems", "euler1()", m[1])
-    for i=2:n
-        df = [df; my_bench(eval(parse("euler$i")), "Problems", "euler$i()", m[i])]
-    end
-    return df
-end
+# function new_bench(n::Int, m::Array{Int, 1})
+#     # Create benchmark df for euler problems 1 to n by running m times
+#     if length(m) != n
+#         error("length(m) must equal n")
+#     end
+#     df = my_bench(euler1, "Problems", "euler1()", m[1])
+#     for i=2:n
+#         df = [df; my_bench(eval(parse("euler$i")), "Problems", "euler$i()", m[i])]
+#     end
+#     return df
+# end
 
 ## ------------- ##
 #- Prime Numbers -#
@@ -142,6 +142,8 @@ function is_palindrome(n::Integer)
     x = string(n)
     return x == reverse(x)
 end
+
+is_palindrome(x::String) = return x == reverse(x)
 
 
 ## ---------------- ##
