@@ -11,6 +11,4 @@ Problem text:
 Date: Wed Dec 18 14:38:25 MST 2013
 
 """
-function euler5()
-    return reduce(lcm, 1:20)
-end
+euler5() = reduce(lcm, 1:20)

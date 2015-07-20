@@ -16,8 +16,4 @@ Date: Wed Dec 18 14:38:25 MST 2013
 
 """
 import Tools.fiblt
-
-function euler2()
-    x = fiblt(4e6)
-    return sum(x[mod(x, 2) .== 0])
-end
+euler2() = sum(fiblt(4e6)[mod(x, 2) .== 0])

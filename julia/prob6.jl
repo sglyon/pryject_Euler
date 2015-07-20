@@ -14,8 +14,4 @@ Problem text:
 Date: Wed Dec 18 14:38:25 MST 2013
 
 """
-function euler6()
-    sum_squares = sum([1:100].^2)
-    square_sum = sum([1:100])^2
-    return square_sum - sum_squares
-end
+euler6() = sum([1:100])^2 - sum([1:100].^2)

@@ -34,11 +34,13 @@ function euler8()
     ans = 0
     num_str = replace(readall(open("../data/data7.txt")), '\n', "")
     len_str = length(num_str)
-    for i=5:len_str
-        s1 = num_str[i-4:i]
+    for i=13:len_str
+        s1 = num_str[i-12:i]
         test = prod(x -> int(string(x)), collect(s1))
         ans = test > ans ? test: ans
     end
     return ans
 end
+
+println(euler8())
 
