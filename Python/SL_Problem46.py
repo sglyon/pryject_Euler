@@ -24,8 +24,8 @@ while done == 0:
             ans = n
     n += 2
 
-print("The answer is: %i") %(ans)
+print("The answer is: %i" %(ans))
 
 running_time = time()
 elapsed_time = running_time - start_time
-print 'Total Execution time is ', elapsed_time, 'seconds'
+print('Total Execution time is ', elapsed_time, 'seconds')

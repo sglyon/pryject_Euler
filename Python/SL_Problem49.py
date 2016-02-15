@@ -48,9 +48,9 @@ for num in nums:
                 set2 = (a, b, c)
 
 ans = str(set2[0]) + str(set2[1]) + str(set2[2])
-print("The answer is: %s") % str(ans)
+print("The answer is: %s" % str(ans))
 
 
 running_time = time()
 elapsed_time = running_time - start_time
-print 'Total Execution time is ', elapsed_time, 'seconds'
+print('Total Execution time is ', elapsed_time, 'seconds')
